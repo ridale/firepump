@@ -136,11 +136,12 @@ On water tank empty ..?
 
 As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base microcontroler, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power draw 3.3V switching converter to power the electronics.
 
-* [esp32]()
+* [esp32](https://au.mouser.com/ProductDetail/Espressif-Systems/ESP32-DevKitC?qs=chTDxNqvsyn3pn4VyZwnyQ%3D%3D&vip=1&gclid=Cj0KCQiAgebwBRDnARIsAE3eZjSaMIxOQwbbzKJRoOLgDx2BNb10Zq_RORYd0BP7vRTPr6sH7-kzmIoaAlpFEALw_wcB)
 * [relay](https://www.seeedstudio.com/Grove-Relay.html)
 * [solar panel](https://www.jaycar.com.au/12v-40w-monocrystalline-solar-panel/p/ZM9056)
 * [solar regulator](https://www.jaycar.com.au/12v-6a-battery-charging-regulator-for-solar-panels/p/AA0348)
 * [4G modem](https://www.telstra.com.au/internet/mobile-broadband/nighthawk-m2)
+* [buck converter](https://en.wikipedia.org/wiki/Buck_converter)
 
 The 12V inputs will need to be voltage divided to 3.3V.
 
