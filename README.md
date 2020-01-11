@@ -1,6 +1,6 @@
-# Home control system
+# Firepump
 
-I am Working on a system to control the pumps and monitor tank levels and environmental data.
+A system to control the pumps and monitor tank levels and environmental data.
 
 ## Aim
 
@@ -54,7 +54,7 @@ So the first set of examples I saw that made sense and that I was able to hack a
 * [talk](https://www.youtube.com/watch?v=RYaprBSDy8A)
 * [code](https://github.com/GabeWeiss/GoogleIoTCoreApp)
 
-It appears that both Amazon and Microsoft Azure offer IOT in a similar way (MQTT with PKI) but the above gave me the least barrier to entry, I would have amazoned as I already pay for route66 but there wasn't the level of tutorial and sample code.
+It appears that both Amazon and Microsoft Azure offer IOT in a similar way (MQTT with PKI) but the above gave me the lowest barrier to entry, I would have amazoned as I already pay for route66 but there wasn't the level of tutorial and sample code.
 
 ## MQTT
 
@@ -133,6 +133,8 @@ On water tank empty ..?
 * [water solenoid](https://www.valvesonline.com.au/stainless-steel-general-purpose-zero-differential)
 
 ### Electronics
+
+As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base microcontroler, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power drop 3.3V switching converter to power the electronics.
 
 * [esp32]()
 * [relay](https://www.seeedstudio.com/Grove-Relay.html)
