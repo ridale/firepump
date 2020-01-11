@@ -134,13 +134,15 @@ On water tank empty ..?
 
 ### Electronics
 
-As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base microcontroler, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power drop 3.3V switching converter to power the electronics.
+As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base microcontroler, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power draw 3.3V switching converter to power the electronics.
 
 * [esp32]()
 * [relay](https://www.seeedstudio.com/Grove-Relay.html)
 * [solar panel](https://www.jaycar.com.au/12v-40w-monocrystalline-solar-panel/p/ZM9056)
-* [solar controller](https://www.jaycar.com.au/12v-6a-battery-charging-regulator-for-solar-panels/p/AA0348)
+* [solar regulator](https://www.jaycar.com.au/12v-6a-battery-charging-regulator-for-solar-panels/p/AA0348)
 * [4G modem](https://www.telstra.com.au/internet/mobile-broadband/nighthawk-m2)
+
+The 12V inputs will need to be voltage divided to 3.3V.
 
 ## Resources
 
