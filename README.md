@@ -145,7 +145,23 @@ As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base mi
 
 The 12V inputs will need to be voltage divided to 3.3V.
 
+## Sensing
+
+Ideally the pump would be self operated with sensors that could detect the fire front and switch the supression systems on without manual control in the event are not home. There are many sensor types related to fire detection available but they are all designed for indoor user and are not suited for this appliaction.
+
+In the publically available research I have been able to find 2 papers on sensing bushfires that are based around terrestrial sensor networks. One from the University of Adelaide[4] using a primitive temperature/humidity sensor to send SMS notifications if temperature exceeded a certian threshhold. The other[5] from the University of Duisburg-Essen, seemed to offer a more definitive way of detecting fire events using gas sensors, temperature and microwave detection of heat (black body 22.3 GHz).
+
+While the fabrication of the microwave detector may be challenging it is not neccessary for this system, the C<sub>x</sub>H<sub>x</sub>, H<sub>2</sub> and temperature sensors should be enough to use as trigger for the system.
+
+This system is likely to require more power than the pump control system will have and will probably be better suited as an environmental sensor somewhere near the likely fire paths with a battery backed up mains power supply.
+
+* [air quality sensor](https://www.sparkfun.com/products/16531)
+* [particle sensor](https://www.sparkfun.com/products/14045)
+
 ## Resources
 
 1. [google mqtt howto](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
 1. [mqtt data optimization](https://blog.usejournal.com/how-to-optimize-data-usage-over-mqtt-792abebd2cd1)
+1. [google comunity tutorial](https://cloud.google.com/community/tutorials/cloud-iot-gateways-rpi)
+1. A smart bushfire monitoring and detection system using GSM technology, International Journal of Computer Aided Engineering and Technology · January 2010.
+1. Early forest fire detection and verification using optical smoke, gas and microwave sensors, 2012 International Symposium on Safety Science and Technology.
