@@ -1,0 +1,3 @@
+[submodule "MPPT-Solar-Charger"]
+	path = MPPT-Solar-Charger
+	url = https://github.com/danjulio/MPPT-Solar-Charger.git

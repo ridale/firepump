@@ -26,7 +26,7 @@ Thankfully the CFS attended the house and operated the pump. The original pump w
 
 ### Decisions
 
-The requirements are that the hardware used be accessable and inexpensive and that the solution be freely available to those that may want to replicate it.
+The requirements are that the hardware used be accessible and inexpensive and that the solution be freely available to those that may want to replicate it.
 
 * Battery start diesel pump
 * Sensor network
@@ -54,13 +54,17 @@ So the first set of examples I saw that made sense and that I was able to hack a
 * [talk](https://www.youtube.com/watch?v=RYaprBSDy8A)
 * [code](https://github.com/GabeWeiss/GoogleIoTCoreApp)
 
-It appears that both Amazon and Microsoft Azure offer IOT in a similar way (MQTT with PKI) but the above gave me the lowest barrier to entry, I would have amazoned as I already pay for route66 but there wasn't the level of tutorial and sample code.
+It appears that both Amazon and Microsoft Azure offer IOT in a similar way (MQTT with PKI) but the above gave me the lowest barrier to entry, I would have amazon'd as I already pay for route66 but there wasn't the level of tutorial and sample code.
+
+## Amazon green grass
+
+This looks like a better system in some ways. It allows for a local Core device to make decisions for a network of local devices with intermittent connection to the cloud service. If we were to add more automation smarts and sensors on the property this would be the better solution. As we are, in the first instance, only remote controlling the extra complexity is unwarranted.
 
 ## MQTT
 
 ### Topics
 
-We are going to use abbrieviated topic names as longer names can form a significant data usage overhead for periodic update tasks.
+We are going to use abbreviated topic names as longer names can form a significant data usage overhead for periodic update tasks.
 
 We require **fire pump** , **water tank** and **sensor network**.
 
@@ -83,7 +87,7 @@ The following lists the sort of things to monitor.
 * Battery power
 * Temp/Humidity
 * Thermal (IR/Pyro)
-* Prescence (bt/wifi)
+* Presence (bt/wifi)
 * ? Visual (low rate mjpeg? on demand?)
 
 ## Hardware
@@ -134,18 +138,23 @@ On water tank empty ..?
 
 ### Electronics
 
-As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base microcontroler, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power draw 3.3V switching converter to power the electronics.
+As I am using a wifi enabled LTE modem I have decided on an ESP32 as the base micro-controller, The relays to switch the 12 volts will be chosen for ease of use. I will either hack a 12V car usb module (5V) or use a low power draw 3.3V switching converter to power the electronics.
 
 * [esp32](https://au.mouser.com/ProductDetail/Espressif-Systems/ESP32-DevKitC?qs=chTDxNqvsyn3pn4VyZwnyQ%3D%3D&vip=1&gclid=Cj0KCQiAgebwBRDnARIsAE3eZjSaMIxOQwbbzKJRoOLgDx2BNb10Zq_RORYd0BP7vRTPr6sH7-kzmIoaAlpFEALw_wcB)
-* [relay](https://www.seeedstudio.com/Grove-Relay.html)
-* [solar panel](https://www.jaycar.com.au/12v-40w-monocrystalline-solar-panel/p/ZM9056)
-* [solar regulator](https://www.jaycar.com.au/12v-6a-battery-charging-regulator-for-solar-panels/p/AA0348)
-* [4G modem](https://www.telstra.com.au/internet/mobile-broadband/nighthawk-m2)
-* [buck converter](https://en.wikipedia.org/wiki/Buck_converter)
 
-The 12V inputs will need to be voltage divided to 3.3V.
+Or
+
+* [pi zero w](https://www.seeedstudio.com/Raspberry-Pi-Zero-W-p-4257.html)
+
+* [relay](https://www.seeedstudio.com/Grove-Relay.html)
+* [solar panel](https://www.amazon.com.au/ALLPOWERS-Flexible-connectors-Water-resistant-Applications/dp/B071JQGDXQ/ref=sr_1_2?dchild=1&keywords=flexible+solar+panel&qid=1590980796&sr=8-2)
+* [solar regulator](https://github.com/danjulio/MPPT-Solar-Charger)
+* [4G modem](https://www.telstra.com.au/internet/mobile-broadband/nighthawk-m2)
+
+The 12V inputs will need to be voltage divided.
 
 ## Resources
 
 1. [google mqtt howto](https://cloud.google.com/iot/docs/how-tos/mqtt-bridge)
 1. [mqtt data optimization](https://blog.usejournal.com/how-to-optimize-data-usage-over-mqtt-792abebd2cd1)
+1. [amazon green grass core](https://docs.aws.amazon.com/greengrass/latest/developerguide/what-is-gg.html)
